@@ -14,9 +14,19 @@ class TronScene extends Phaser.Scene {
             { frameWidth: 61, frameHeight: 122 }
         );
         this.load.spritesheet(
+            'player1H', 
+            'assets/cycle1.png',
+            { frameWidth: 122, frameHeight: 61 }
+        );
+        this.load.spritesheet(
             'player2', 
             'assets/cycle2.png',
             { frameWidth: 61, frameHeight: 120 }
+        );
+        this.load.spritesheet(
+            'player2H', 
+            'assets/cycle2.png',
+            { frameWidth: 120, frameHeight: 61 }
         );
         this.load.image('background', 'assets/background.png');
     }
@@ -33,13 +43,15 @@ class TronScene extends Phaser.Scene {
 
         // Crear el jugador 1
         this.player1 = this.add.sprite(400, 300, 'player1')
-            .setOrigin(0.5, 0.5)
-            .setScale(0.5);
+            .setOrigin(1, 0.5)
+            .setScale(0.2);
+            console.log(this.player1);
+            
 
         // Crear el jugador 2
-        this.player2 = this.add.sprite(600, 300, 'player2') // Asegúrate de que este sprite se cargue correctamente
-            .setOrigin(0.5, 0.5)
-            .setScale(0.25);
+        this.player2 = this.add.sprite(600, 300, 'player2') 
+            .setOrigin(0, 1)
+            .setScale(0.2);
             console.log("Player2 created:", this.player2);
 
 
@@ -52,20 +64,58 @@ class TronScene extends Phaser.Scene {
             'background'
         );
 
-        // Definir las animaciones
+    // Definir las animaciones 
+        // Jugador 1
         this.anims.create({
-            key: 'cycle1Position',
-            frames: this.anims.generateFrameNumbers('player1', { start: 0, end: 1 }),
+            key: 'cycle1PositionUp',
+            frames: this.anims.generateFrameNumbers('player1', { start: 0, end: 0 }),
             frameRate: 10,
             repeat: -1
         });
         this.anims.create({
-            key: 'cycle2Position',
-            frames: this.anims.generateFrameNumbers('player2', { start: 0, end: 1 }),
+            key: 'cycle1PositionDown',
+            frames: this.anims.generateFrameNumbers('player1', { start: 1, end: 1 }),
+            frameRate: 10,
+            repeat: -1
+        });
+        this.anims.create({
+            key: 'cycle1PositionL',
+            frames: this.anims.generateFrameNumbers('player1H', { start: 3, end: 3 }),
+            frameRate: 10,
+            repeat: -1
+        });
+        this.anims.create({
+            key: 'cycle1PositionR',
+            frames: this.anims.generateFrameNumbers('player1H', { start: 3, end: 3 }),
             frameRate: 10,
             repeat: -1
         });
 
+        // Jugador 2
+        this.anims.create({
+            key: 'cycle2PositionUp',
+            frames: this.anims.generateFrameNumbers('player2', { start: 0, end: 0 }),
+            frameRate: 10,
+            repeat: -1
+        });
+        this.anims.create({
+            key: 'cycle2PositionDown',
+            frames: this.anims.generateFrameNumbers('player2', { start: 1, end: 1 }),
+            frameRate: 10,
+            repeat: -1
+        });
+        this.anims.create({
+            key: 'cycle2PositionL',
+            frames: this.anims.generateFrameNumbers('player2H', { start: 3, end: 3 }),
+            frameRate: 10,
+            repeat: -1
+        });
+        this.anims.create({
+            key: 'cycle2PositionR',
+            frames: this.anims.generateFrameNumbers('player2H', { start: 3, end: 3 }),
+            frameRate: 10,
+            repeat: -1
+        });
         this.gameService.createPlayers(this);
     }
 

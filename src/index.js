@@ -6,9 +6,15 @@ console.log("hola mundo");
 
 const config = {
     type: Phaser.AUTO,
-    width: 500,
+    width: 1000,
     height: 500,
     backgroundColor: '#010020',
+    physics: {
+        default: 'arcade',
+        arcade: {
+            debug: true
+        }
+    },
     scene: new TronScene,
 };
 
