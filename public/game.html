@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tron: Lightcycle Battle</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="../src/index.js" type="module"></script>
+</head>
+<body>
+    <div class="grid" id="game-grid"></div>
+    <div id="container">
+        <div id="player-one" class="stats player">
+            <div id="player-one-name" class="name player-one-name">Player 1</div>
+            <div id="player-one-lives" class="lives"></div>
+        </div>
+        <div id="score-board-container" class="stats score">
+            <div id="player-one-score" class="scoreboard">0</div>
+            <div id="score-title" class="scoreboard">SCORE</div>
+            <div id="player-two-score" class="scoreboard">0</div>
+        </div>
+        <div id="player-two" class="stats player">
+            <div id="player-two-name" class="name player-two-name">Player 2</div>
+            <div id="player-two-lives" class="lives"></div>
+        </div>
+    </div>
+    <div id="overlay">
+        <div id="overlay-content"></div>
+    </div>
+</body>
+</html>

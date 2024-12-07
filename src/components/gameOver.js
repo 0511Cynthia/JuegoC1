@@ -1,17 +1,7 @@
-class gameOver {
-    constructor(scene) {
-        this.scene = scene;
-        this.gameOverText = this.scene.add.text(400, 300, 'Game Over',{fontSize: '64px',  fill: '#ff0000'}).setOrigin(0.5)
-        this.gameOverText.setVisibility(false)
-    }
-    
-    showGameOver(){
-        this.gameOverText.setVisible(true)
-    }
+// src/components/gameOver.js
 
-    hideGameOver(){
-        this.gameOverText.setVisible(false)
-    }
+export function displayGameOver(winner, GameState) {
+    const overlay = document.getElementById("overlay");
+    overlay.style.display = "block";
+    overlay.innerHTML = `<h1>${winner} Wins!</h1>`;
 }
-
-export default gameOver;

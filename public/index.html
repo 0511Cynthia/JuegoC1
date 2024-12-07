@@ -1,23 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./favicon.png" type="image/png" />
-    <title>Tron Game</title>
-    <script src="./phaser.min.js"></script>
-    <script src="../src/index.js" type="module"></script>
-    <link rel="stylesheet" href="style.css" />
-    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tron: Lightcycle Battle</title>
+    <link rel="stylesheet" href="styles-index.css">
+    <script src="../src/index.js" type="module" defer></script>
 </head>
 <body>
-    <div id="container"></div>
-    <!-- <script src="../node_modules/phaser/dist/phaser.js"></script>
-    <script src="../src/index.js" type="module"></script> -->
-    <!-- <script src="bundle.js"></script> -->
-    
-    <!-- Asegúrate de compilar tu código -->
-</body>
+    <div id="landing-container">
+        <div id="left" class="home">
+            <div id="grid2"></div>
+        </div>
+        <div id="center" class="home">
+            <img src="assets/images/tron-logo.jpeg" id="tron-logo" alt="Tron Logo">
+            <span id="logo-title">LIGHTCYCLE BATTLE</span>
 
+            <!-- Player Choice Menu -->
+            <div id="player-choice-container">
+                <div id="menu-item-0" class="player-choice" data-action="1-player">1 PLAYER</div>
+                <div id="menu-item-1" class="player-choice" data-action="2-player">2 PLAYERS</div>
+            </div>
+
+            <!-- Additional Menu Options -->
+            <div id="menu-container">
+            </div>
+
+            <!-- Controls -->
+            <div id="controls-container">
+                <div id="player-one-controls" class="controls">
+                    <div class="button-border"><div class="button">W</div></div>
+                    <div class="button-border"><div class="button">A</div></div>
+                    <div class="button-border"><div class="button">S</div></div>
+                    <div class="button-border"><div class="button">D</div></div>
+                </div>
+                <div id="player-two-controls" class="controls">
+                    <div class="button-border"><div class="button">⇡</div></div>
+                    <div class="button-border"><div class="button">⇠</div></div>
+                    <div class="button-border"><div class="button">⇣</div></div>
+                    <div class="button-border"><div class="button">⇢</div></div>
+                </div>
+            </div>
+
+            <div id="controller-name">
+                <div>Player 1 Controls</div>
+                <div>Player 2 Controls</div>
+            </div>
+        </div>
+        <div id="right" class="home">
+            <div class="grid"></div>
+        </div>
+    </div>
+
+    <!-- Overlay for messages -->
+    <div id="overlay">
+        <div id="overlay-content"></div>
+    </div>
+</body>
 </html>

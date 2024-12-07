@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+body {
+    background-color: black;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.grid {
+    width: 200px;
+    height: 2000px;
+    /* border: 1px solid darkgray;  */
+    margin: -1030px auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+}
+.grid div {
+    width: 10px;
+    height: 10px;
+    /* border: 1px white solid; */
+    box-sizing:border-box;
+}
+
+.player-choice, .menu-option {
+    font-size: 20px;
+    padding: 20px 15px;
+    margin: 10px auto;
+    width: 220px;
+    text-align: center;
+    border: 4px solid rgb(132, 206, 236);
+    border-radius: 40px;
+    box-shadow: 0px 0px 10px 1px rgb(120, 252, 252);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.player-choice:hover, .menu-option:hover {
+    border-color: rgb(214, 151, 87);
+    box-shadow: 0px 0px 15px 1px rgb(190, 68, 53);
+}
+
+.streamOne {
+    background-color: rgb(214, 151, 87);
+    box-shadow: 0px 0px 40px 5px rgb(190, 68, 53);
+    animation: fader 3s 10s 1 normal forwards;
+}
+.streamTwo {
+    background-color: rgb(255, 210, 89);
+    box-shadow: 0px 0px 40px 5px rgb(246, 183, 69);
+    animation: fader 3s 10s 1 normal forwards;
+}
+.streamThree {
+    background-color: rgb(214, 151, 87);
+    box-shadow: 0px 0px 40px 5px rgb(190, 68, 53);
+    animation: fader 3s 10s 1 normal forwards;
+}
+.streamFour {
+    background-color: rgb(214, 151, 87);
+    box-shadow: 0px 0px 40px 5px rgb(190, 68, 53);
+    animation: fader 3s 10s 1 normal forwards;
+}
+.streamFive {
+    background-color: rgb(120, 252, 252);
+    box-shadow: 0px 0px 40px 5px rgb(120, 252, 252);
+    animation: fader 3s 8s 1 normal forwards;
+}
+
+@keyframes fader {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.home {
+    /* border: 1px solid yellow; */
+    height: 100%;
+}
+#left {
+    min-width: 10%;
+    max-width: 24%;
+    min-height: 100%;
+    /* border: 1px solid yellow; */
+}
+#right {
+    min-width: 10%;
+    max-width: 24%;
+    /* border: 1px solid yellow; */
+    overflow: hidden;
+}
+#center {
+    width: 800px;
+    text-align: center;
+    min-height: 100%;
+    /* border: 1px solid yellow; */
+    overflow: hidden;
+}
+#landing-container {
+    /* border: 1px solid pink; */
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100%;
+    justify-content: center;
+}
+footer {
+    /* border: 1px solid green; */
+    width: 100%;
+    height: fit-content;
+}
+#tron-logo {
+    width: 650px;
+    margin-top: 55px;
+    /* border: 1px solid purple; */
+}
+#menu-container {
+    /* border: 1px solid blue; */
+    color: white;
+    margin-top: 70px;
+    margin-bottom: 5%;
+}
+#menu {
+    display: flex;
+    justify-content: center;
+    font-family: 'Press Start 2P';
+    font-size: 20px;
+    color:rgb(132, 206, 236);
+    text-shadow: 0px 0px 10px rgb(120, 252, 252);
+}
+#selection {
+    text-align: center;
+}
+.list {
+    list-style: none;
+    /* border: 1px solid red; */
+    width: 250px;
+    color:white;
+}
+li {
+    height: 45px;
+}
+#logo-title {
+    display: block;
+    font-family: 'Press Start 2P';
+    color:rgb(132, 206, 236);
+    text-shadow: 0px 0px 10px rgb(120, 252, 252);
+    font-size: 20px;
+    padding-bottom: 100px;
+}
+.selection-icon {
+    height: 20px;
+    /* border: 1px solid yellow; */
+    margin-right: 350px;
+}
+#menu-icon {
+    text-align: left;   
+    padding-inline-start: 10px;
+    width: 50px;
+}
+#player-choice-container {
+     /* border: 1px solid blue; */
+     color: white;
+     text-shadow: 0px 0px 10px rgb(120, 252, 252);
+     display: flex;
+     justify-content: center;
+     font-size: 14px;
+}
+.player-choice {
+    font-family: 'Press Start 2P';
+    font-size: 20px;
+    box-shadow: 0px 0px 10px 1px rgb(120, 252, 252);
+    border: 4px solid rgb(132, 206, 236);
+    border-radius: 40px;
+    padding: 20px 15px;
+    margin: 0 auto;
+    width: 220px;
+    text-align: center;
+}
+#controls-container {
+    /* border: 1px solid blue; */
+    color: white;
+    display: flex;
+    justify-content:space-around;
+    font-size: 14px;
+}
+.controls {
+    /* border: 1px solid fuchsia; */
+    width: 200px;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0px;
+}
+.button-border {
+    /* border: 1px solid blue; */
+    width: 60px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+}
+.button {
+    font-family: 'Press Start 2P';
+    border: 2px solid white;
+    width: 38px;
+    height: 32px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 4px;
+}
+#controller-name {
+    /* border: 1px solid blue; */
+    color: white;
+    display: flex;
+    justify-content:space-around;
+    font-family: 'Press Start 2P';
+    font-size: 15px;
+    padding-top: 5px;
+}
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color:seashell;
+    background-color: rgba(0,0,0,0.7); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+#overlay-content {
+    height:  fit-content;
+    width: 800px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    font-size: 40px;
+    font-family: 'Press Start 2P';
+    color: white;
+    border: 2px double red;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    padding: 20px;
+    background-color: rgba(0,0,0,0.9);
+}
+#white-box {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 20px 5px rgb(120, 252, 252);
+    display: inline-block;
+}
+.message-title {
+    font-size: 20px;
+    text-align: center;
+    padding: 5px 0;
+    margin-bottom: 25px;
+    color: darkred;
+    background-color: gray;
+}
+.message-small {
+    margin-top: 35px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 18px;
+}
+.message-large {
+    font-size: 20px;
+    line-height: 24px;
+}
+.blinking-cursor {
+    display: inline-block;
+    width: 5px;
+    height: 20px;
+    background-color: white;
+    border: 1px solid white;
+    animation: blink 1s linear infinite alternate;
+}
+.overlay-key {
+    color: yellow;
+}
+@keyframes blink {
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
